@@ -13,7 +13,6 @@ class WineDataset(Dataset):
 
     def __init__(self) -> None:
         # data loading
-        # pylint: disable=invalid-name
         xy = np.loadtxt('./data/wine.csv', delimiter=",",
                         dtype=np.float32, skiprows=1)
         self.x = torch.from_numpy(xy[:, 1:])

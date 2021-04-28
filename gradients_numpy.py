@@ -37,12 +37,12 @@ def gradient(x, y, y_predicted):
 print(f"Prediction before training: f(5) = {forward(5):.3f}")
 
 # Training
-learning_rate = 0.01
-n_iters = 20
-print_amount = 10
-print_rate = n_iters / print_amount
+LEARNING_RATE = 0.01
+N_ITERS = 20
+PRINT_AMOUNT = 10
+PRINT_RATE = N_ITERS / PRINT_AMOUNT
 
-for epoch in range(n_iters):
+for epoch in range(N_ITERS):
     # prediction = forward pass
     y_pred = forward(X)
 
@@ -53,9 +53,9 @@ for epoch in range(n_iters):
     dw = gradient(X, Y, y_pred)
 
     # update weights
-    w -= learning_rate * dw
+    w -= LEARNING_RATE * dw
 
-    if epoch % print_rate == 0:
+    if epoch % PRINT_RATE == 0:
         print(f"Epoch {epoch + 1}: w = {w:.3f}, loss = {l:.8f}")
 
 print(f"Prediction after training: f(5) = {forward(5):.3f}")

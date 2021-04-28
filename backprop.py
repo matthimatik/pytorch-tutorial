@@ -3,6 +3,7 @@ Autograd tutorial playground
 """
 
 import torch
+# pylint: disable=not-callable
 
 x = torch.tensor(1.0)
 y = torch.tensor(2.0)
